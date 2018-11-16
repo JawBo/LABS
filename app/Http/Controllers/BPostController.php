@@ -14,13 +14,25 @@ class BPostController extends Controller
 {
     public function index(){
 
-        $contenuArticle = Article::all();
+        $contenuArticle = Article::with('tags')->get();
         $categories = Categorie::all();
         $insta = Image::all();
         $tags = Tag::all();
-        $quote = QUote::all()->random(1);
+        $quote = Quote::all()->random(1);
 
         return view ('blogPost', compact('contenuArticle','categories','insta','tags','quote'));
+
+    }
+    public function article($id){
+        
+        $contenuArticle = Article::find($id);
+        $categories = Categorie::all();
+        $insta = Image::all();
+        $tags = Tag::all();
+        $quote = Quote::all()->random(1);
+
+        return view ('blogPost', compact('contenuArticle','categories','insta','tags','quote'));
+
 
     }
 }

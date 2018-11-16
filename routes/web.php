@@ -19,6 +19,8 @@ Route::get('/blog', 'BlogController@index');
 
 Route::get('/blogpost', 'BPostController@index');
 
+Route::get('/blogpost/{id}','BPostController@article');
+
 Route::get('/contact', function () {
     return view('contact');
 });

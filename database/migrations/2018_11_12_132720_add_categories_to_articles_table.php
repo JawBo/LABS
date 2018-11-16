@@ -16,6 +16,7 @@ class AddCategoriesToArticlesTable extends Migration
         Schema::table('articles', function (Blueprint $table) {
             $table->unsignedInteger('categorie_id');
             $table->foreign('categorie_id')->references('id')->on('categories');            
+
         });
     }
 

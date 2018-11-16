@@ -14,7 +14,7 @@ class TagSeeder extends Seeder
      DB::table('tags')->insert([
 
         [
-            'tag'=>'branding'
+            'tag'=>'Branding'
         ],
         [
             'tag'=>'Web Design'

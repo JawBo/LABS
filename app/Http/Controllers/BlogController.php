@@ -14,13 +14,13 @@ class BlogController extends Controller
 {
     public function index(){
 
-        $contenuArticle = Article::all();
-        $categories = Categorie::all();
+        $contenuArticle = Article::with('tags','categories')->get();
+        $contenuCategories = Categorie::all();
         $insta = Image::all();
         $tags = Tag::all();
-        $quote = QUote::all()->random(1);
+        $quote = Quote::all()->random(1);
 
-        return view ('blog', compact('contenuArticle','categories','insta','tags','quote'));
 
+        return view ('blog', compact('contenuArticle','contenuCategories','insta','tags','quote'));
     }
 }
