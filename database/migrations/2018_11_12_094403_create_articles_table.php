@@ -20,6 +20,7 @@ class CreateArticlesTable extends Migration
             $table->text('text');
             $table->text('preview');
             $table->string('image');
+            $table->date('date')->nullable();
             $table->softDeletes();
             $table->boolean('validation')->nullable();
         });

@@ -14,7 +14,8 @@ class AddArticlesIdToCommentsTable extends Migration
     public function up()
     {
         Schema::table('comments', function (Blueprint $table) {
-            //
+            $table->unsignedInteger('article_id');
+            $table->foreign('article_id')->references('id')->on('articles');
         });
     }
 

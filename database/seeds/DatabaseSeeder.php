@@ -25,6 +25,7 @@ class DatabaseSeeder extends Seeder
         $this->call(CategorieSeeder::class);
         $this->call(InstaSeeder::class);
         $this->call(ArticleSeeder::class);
+        $this->call(CommentSeeder::class);
         $this->call(QuoteSeeder::class);
         
 

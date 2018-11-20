@@ -15,7 +15,13 @@ class RoleSeeder extends Seeder
 
             [
                 'role'=>'admin'
-            ]
+            ],
+            [
+                'role'=>'editor'
+            ],
+            [
+                'role'=>'guest'
+            ],
 
 
         ]);

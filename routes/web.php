@@ -17,7 +17,7 @@ Route::get('/services', 'ServiceController@index');
 
 Route::get('/blog', 'BlogController@index');
 
-Route::get('/blogpost', 'BPostController@index');
+// Route::get('/blogpost', 'BPostController@index');  
 
 Route::get('/blogpost/{id}','BPostController@article');
 
@@ -26,6 +26,10 @@ Route::get('/contact', function () {
 });
 
 
+Route::post('/news','NewsletterControler@index');
+
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+

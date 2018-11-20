@@ -14,21 +14,21 @@ class UserSeeder extends Seeder
         DB::table('users')->insert([
 
             [
-                'name'=>'J',
-                'fname'=>'B',
+                'name'=>'B',
+                'fname'=>'J',
                 'role_id'=>'1',
                 'email'=>'j@m.be',
-                'password'=>'60474c9c10d7142b7508ce7a50acf414',
-                'image'=>'img/avatar/01.jpg',
+                'password'=>bcrypt('test12'),
+                'image'=>'img/avatar/1.png',
                 'bio'=>'machin bidule chose'
 
             ],
             [
-                'name'=>'B',
-                'fname'=>'J',
-                'role_id'=>'1',
+                'name'=>'J',
+                'fname'=>'B',
+                'role_id'=>'2',
                 'email'=>'b@u.be',
-                'password'=>'test24',
+                'password'=>bcrypt('test12'),
                 'image'=>'img/avatar/02.jpg',
                 'bio'=>'lorem ispum hein'
 
@@ -36,9 +36,9 @@ class UserSeeder extends Seeder
             [
                 'name'=>'Williams',
                 'fname'=>'Lore',
-                'role_id'=>'1',
+                'role_id'=>'3',
                 'email'=>'w@l.be',
-                'password'=>'lorewil',
+                'password'=>bcrypt('test12'),
                 'image'=>'img/avatar/03.jpg',
                 'bio'=>'machin bidule truc chose'
 

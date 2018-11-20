@@ -16,8 +16,12 @@
           <h2 class="post-title">{{$item->name}} </h2>
           <div class="post-meta">
             
-          <a href="">{{$item->tags[0]->tag}}</a>
-          <a href="">{{$item->categories->categorie}}</a>
+            <a href="">{{$item->categories->categorie}}</a>
+            <a href="">
+          @foreach ($item->tags as $tag)
+            {{$tag->tag}}
+          @endforeach
+            </a>
             <a href="">2 Comments</a>
           </div>
         <p>{{$item->preview}}</p>
