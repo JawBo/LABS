@@ -1,5 +1,14 @@
 <div class="newsletter-section spad" id="newsletter">
     <div class="container">
+        @if ($errors->any())
+        <div class="alert alert-danger">
+                <ul>
+                        @foreach ($errors->all() as $error)
+                                <li id="errorNewsletter">{{ $error }}</li>
+                        @endforeach
+                </ul>
+        </div>
+        @endif
         <div class="row">
             <div class="col-md-3">
                 <h2>Newsletter</h2>

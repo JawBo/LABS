@@ -10,4 +10,7 @@ class Comment extends Model
     {
         return $this->belongsTo('App\User','users_id');
     }
+    public function article(){
+        return $this->belongsTo('App\Article','article_id');
+    }
 }

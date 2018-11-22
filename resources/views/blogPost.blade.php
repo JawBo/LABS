@@ -80,74 +80,28 @@
             <div class="row">
                 <div class="col-md-8 col-sm-7 blog-posts">
                     <!-- Single Post -->
-
-                    <div class="single-post">
-                        <div class="post-thumbnail">
-                            <img src="{{'/'.$article->image}}" alt="">
-                            <div class="post-date">
-                                (C.F.: Date on Blade )
-                                {{-- <h2>{{$article->created_at->format('d')}}</h2>
-                                <h3>{{$article->created_at->format('M Y')}}</h3> --}}
-                            </div>
-                        </div>
-                        <div class="post-content">
-                            <h2 class="post-title">{{$article->name}}</h2>
-                            <div class="post-meta">
-                                <a href="">{{$article->categories->categorie}}</a>
-                                <a href="">
-                                    @foreach ($article->tags as $tag)
-                                    {{$tag->tag}},
-                                    @endforeach
-                                </a>
-
-                                <a href="">2 Comments</a>
-                            </div>
-                            <p>{{$article->preview}}</p>
-                            <p>{{$article->text}} </p>
-                            {{-- <p>Fusce vel tempus nunc. Phasellus et risus eget sapien suscipit efficitur.
-                                Suspendisse iaculis purus ornare urna egestas imperdiet. Nulla congue consectetur
-                                placerat. Integer sit amet auctor justo. Pellentesque vel congue velit. Sed ullamcorper
-                                lacus scelerisque condimentum convallis. Sed ac mollis sem. </p> --}}
-                        </div>
-                        <!-- Post Author -->
-                        <div class="author">
-                            <div class="avatar">
-                                <img src="{{'/'.$article->user->image}}" alt="">
-                            </div>
-                            <div class="author-info">
-                                <h2>{{$article->user->name}} {{$article->user->fname}} <span>Author</span></h2>
-                                <p>{{$article->user->bio}} </p>
-                            </div>
-                        </div>
+                        @include('partials/article')
+                    
                         <!-- Post Comments -->
-                        <div class="comments">
-                            <h2>Comments (2)</h2>
+                       @include('partials/commentsection')
 
-											@foreach ($contenuComments as $key => $comment)
-											@if ($key < 3) <ul class="comment-list">
-													<li>
-															<div class="avatar">
-
-																	<img src="{{'/'.$comment->user->image}}" alt="">
-															</div>
-															<div class="commetn-text">
-																	<h3>{{$comment->user->fname}} {{$comment->user->name}} |
-																			{{$comment->created_at->format('d M H:i')}} | Reply</h3>
-																	<p>{{$comment->comment}}</p>
-															</div>
-													</li>
-													</ul>
-													@endif
-													@endforeach
-
-
-
-                        </div>
                         <!-- Commert Form -->
                         <div class="row">
                             <div class="col-md-9 comment-from">
                                 <h2>Leave a comment</h2>
-                                <form class="form-class">
+
+                                @if ($errors->any())
+						<div class="alert alert-danger ">
+								<ul >
+										@foreach ($errors->all() as $error)
+												<li id="errorContact">{{ $error }}</li>
+										@endforeach
+								</ul>
+						</div>
+						@endif
+
+                            <form class="form-class" action="/createcomment/{{$contenuComments[0]->article->id}}" method="post">
+                                    @csrf
                                     <div class="row">
                                         <div class="col-sm-6">
                                             <input type="text" name="name" placeholder="Your name">
@@ -156,8 +110,8 @@
                                             <input type="text" name="email" placeholder="Your email">
                                         </div>
                                         <div class="col-sm-12">
-                                            <textarea name="message" placeholder="Message"></textarea>
-                                            <button class="site-btn">send</button>
+                                            <textarea name="comment" placeholder="Comment"></textarea>
+                                            <button class="site-btn " type="submit">Send</button>
                                         </div>
                                     </div>
                                 </form>
@@ -166,7 +120,7 @@
                     </div>
                 </div>
                 <!-- Sidebar area -->
-                <div class="col-md-4 col-sm-5 sidebar">
+                {{-- <div class="col-md-4 col-sm-5 sidebar">
                     <!-- Single widget -->
                     <div class="widget-item">
                         <form action="#" class="search-form">
@@ -221,7 +175,8 @@
                             <a href=""><img src="/img/add.jpg" alt=""></a>
                         </div>
                     </div>
-                </div>
+                </div> --}}
+                @include('partials.sidebar')
             </div>
         </div>
     </div>

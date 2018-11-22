@@ -43,6 +43,16 @@ class UserSeeder extends Seeder
                 'bio'=>'machin bidule truc chose'
 
             ],
+            [
+                'name'=>'Nymous',
+                'fname'=>'Ano',
+                'role_id'=>'4',
+                'email'=>'',
+                'password'=>bcrypt('test12'),
+                'image'=>'img/avatar/ano.png',
+                'bio'=>''
+
+            ],
 
 
 

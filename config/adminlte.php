@@ -133,43 +133,189 @@ return [
             'icon' => 'lock',
         ],
         [
-            'text'    => 'Multilevel',
-            'icon'    => 'share',
-            'submenu' => [
+            'text'    => 'HomePage',
+            'icon'    => 'home',
+            'submenu' => 
+            [
                 [
-                    'text' => 'Level One',
-                    'url'  => '#',
+                    'text' => 'Logo WebSite',
+                    'url'  => '/admin/logo',
                 ],
                 [
-                    'text'    => 'Level One',
-                    'url'     => '#',
-                    'submenu' => [
+                    'text' => 'Carousel',
+                    'url'  => '/admin/carousel',
+                ],
+                
+                [
+                    'text' => 'Video',
+                    'url'  => '/admin/video',
+                ],
+                [
+                    'text' => 'Testimonials',
+                    'url'  => '/admin/testimonial',
+                ],
+                [
+                    'text' => '10 Services',
+                    'url'  => '/admin/10services',
+                ],
+                [
+                    'text' => 'Team',
+                    'url'  => '/admin/team',
+                ],
+                
+                [
+                    'text' => 'TextHomepage',
+                    'url'  => '/admin/texthome',
+                    'submenu' => 
+                    [
                         [
-                            'text' => 'Level Two',
+                            'text' => 'Logo',
                             'url'  => '#',
                         ],
                         [
-                            'text'    => 'Level Two',
-                            'url'     => '#',
-                            'submenu' => [
-                                [
-                                    'text' => 'Level Three',
-                                    'url'  => '#',
-                                ],
-                                [
-                                    'text' => 'Level Three',
-                                    'url'  => '#',
-                                ],
-                            ],
+                            'text' => 'Video',
+                            'url'  => '#',
                         ],
-                    ],
-                ],
-                [
-                    'text' => 'Level One',
-                    'url'  => '#',
-                ],
+                        [
+                            'text' => 'Testimonials',
+                            'url'  => '#',
+                        ],
+                        [
+                            'text' => 'Services',
+                            'url'  => '#',
+                        ],
+                        [
+                            'text' => 'Team',
+                            'url'  => '#',
+                        ],
+                        [
+                            'text' => 'Are You Ready ...',
+                            'url'  => '#',
+                        ],
+                        [
+                            'text' => 'Contact Us',
+                            'url'  => '#',
+                        ],
+                    ]
+
+                 ],
             ],
         ],
+        [
+            'text'    => 'Services Page',
+            'icon'    => 'gears',
+            'submenu' => 
+            [
+                [
+                    'text' => 'Services',
+                    'url'  => '/admin/services',
+                ],                
+                [
+                    'text' => 'Projects',
+                    'url'  => '/admin/projects',
+                ],
+                [
+                    'text' => '3 Projects',
+                    'url'  => '/admin/3project',
+                ],
+                [
+                    'text' => 'Text Service Page',
+                    'url'  => '/admin/textservice',
+                    'submenu' => 
+                    [
+                        [
+                            'text' => 'Logo',
+                            'url'  => '#',
+                        ],
+                        [
+                            'text' => 'Video',
+                            'url'  => '#',
+                        ],
+                        [
+                            'text' => 'Testimonials',
+                            'url'  => '#',
+                        ],
+                        [
+                            'text' => 'Services',
+                            'url'  => '#',
+                        ],
+                        [
+                            'text' => 'Team',
+                            'url'  => '#',
+                        ],
+                        [
+                            'text' => 'Are You Ready ...',
+                            'url'  => '#',
+                        ],
+                        [
+                            'text' => 'Contact Us',
+                            'url'  => '#',
+                        ],
+                    ]
+
+                 ],
+            ],
+        ],
+        [
+            'text'    => 'Blog Page',
+            'icon'    => 'newspaper-o',
+            'submenu' => 
+            [
+                [
+                    'text' => 'Posts',
+                    'url'  => '/admin/posts',
+                ],  
+                [
+                    'text' => 'New Post',
+                    'url'  => '/admin/newpost',
+                ],                
+                [
+                    'text' => 'Categories',
+                    'url'  => '/admin/categories',
+                ],
+                [
+                    'text' => 'Tags',
+                    'url'  => '/admin/tags',
+                ],
+                [
+                    'text' => 'Text Blog Page',
+                    'url'  => '/admin/textblog',
+                    'submenu' => 
+                    [
+                        [
+                            'text' => 'Logo',
+                            'url'  => '#',
+                        ],
+                        [
+                            'text' => 'Video',
+                            'url'  => '#',
+                        ],
+                        [
+                            'text' => 'Testimonials',
+                            'url'  => '#',
+                        ],
+                        [
+                            'text' => 'Services',
+                            'url'  => '#',
+                        ],
+                        [
+                            'text' => 'Team',
+                            'url'  => '#',
+                        ],
+                        [
+                            'text' => 'Are You Ready ...',
+                            'url'  => '#',
+                        ],
+                        [
+                            'text' => 'Contact Us',
+                            'url'  => '#',
+                        ],
+                    ]
+
+                 ],
+            ],
+        ],
+        
         'LABELS',
         [
             'text'       => 'Important',
@@ -184,7 +330,7 @@ return [
             'icon_color' => 'aqua',
         ],
     ],
-
+    
     /*
     |--------------------------------------------------------------------------
     | Menu Filters
@@ -220,5 +366,7 @@ return [
         'datatables' => true,
         'select2'    => true,
         'chartjs'    => true,
-    ],
+    ]
+    
+    
 ];

@@ -73,7 +73,8 @@
 
 	<!-- page section -->
 	<div class="page-section spad">
-	@include('partials.article')
+	@include('partials.articles')
+	@include('partials.sidebar')
 	<!-- page section end-->
 
 

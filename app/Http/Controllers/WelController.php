@@ -13,7 +13,7 @@ use App\Team;
 class WelController extends Controller
 {
     public function index(){
-        $contenuImage = Image::all();
+        $contenuImage = Image::where('section','carousel')->get();
         $contenuIcone = Icone::all();
         $services3 = Service::all()->random(3);
         $contenuService = Service::all();
